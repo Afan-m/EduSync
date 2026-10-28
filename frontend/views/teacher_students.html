@@ -1,0 +1,66 @@
+<div id="teacher-students-view">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h2>Student Management</h2>
+            <p class="text-muted">Search and review your assigned students.</p>
+        </div>
+    </div>
+
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <label class="form-label">Search</label>
+                    <input type="text" id="teacher-student-search" class="form-control" placeholder="Search by name, email or USN">
+                </div>
+                <div class="col-md-2">
+                    <label class="form-label">Department</label>
+                    <select id="teacher-student-department" class="form-select">
+                        <option value="">All</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <label class="form-label">Semester</label>
+                    <select id="teacher-student-semester" class="form-select">
+                        <option value="">All</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <label class="form-label">Section</label>
+                    <select id="teacher-student-section" class="form-select">
+                        <option value="">All</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                    </select>
+                </div>
+                <div class="col-md-2 d-flex align-items-end">
+                    <button class="btn btn-primary w-100" onclick="loadTeacherStudentManagement(true)">Apply</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="teacher-student-list" class="mt-4"></div>
+</div>
+
+<div class="modal fade" id="teacherStudentProfileModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Student Profile</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="teacher-student-profile-body"></div>
+        </div>
+    </div>
+</div>

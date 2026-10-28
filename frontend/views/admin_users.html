@@ -1,0 +1,82 @@
+<div id="admin-users-view">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h2>Admin User Management</h2>
+            <p class="text-muted">Browse and filter students and teachers.</p>
+        </div>
+        <div>
+            <button class="btn btn-success" id="btn-create-teacher" onclick="showCreateTeacherModal()">Create Teacher</button>
+        </div>
+    </div>
+
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <label class="form-label">Search</label>
+                    <input id="admin-user-search" class="form-control" placeholder="Name, email, USN, employee ID" />
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Role</label>
+                    <select id="admin-user-role" class="form-select">
+                        <option value="">All</option>
+                        <option value="student">Students</option>
+                        <option value="teacher">Teachers</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Department</label>
+                    <input id="admin-user-dept" class="form-control" placeholder="Department" />
+                </div>
+                <div class="col-md-2 d-flex align-items-end">
+                    <button class="btn btn-primary w-100" onclick="loadAdminUsers()">Filter</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="admin-users-list" class="row g-3"></div>
+</div>
+
+<!-- Create Teacher Modal -->
+<div class="modal" id="createTeacherModal" tabindex="-1" style="display:none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Create Teacher</h5>
+                <button type="button" class="btn-close" onclick="hideCreateTeacherModal()"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-2">
+                    <label class="form-label">Full Name</label>
+                    <input id="ct-full_name" class="form-control" />
+                </div>
+                <div class="mb-2">
+                    <label class="form-label">Email</label>
+                    <input id="ct-email" class="form-control" type="email" />
+                </div>
+                <div class="mb-2">
+                    <label class="form-label">Password</label>
+                    <input id="ct-password" class="form-control" type="password" />
+                </div>
+                <div class="mb-2">
+                    <label class="form-label">Department</label>
+                    <input id="ct-department" class="form-control" />
+                </div>
+                <div class="mb-2">
+                    <label class="form-label">Designation (optional)</label>
+                    <input id="ct-designation" class="form-control" />
+                </div>
+                <div class="mb-2">
+                    <label class="form-label">Phone (optional)</label>
+                    <input id="ct-phone" class="form-control" />
+                </div>
+                <div id="ct-alert" style="display:none;" class="alert"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="hideCreateTeacherModal()">Cancel</button>
+                <button class="btn btn-primary" onclick="submitCreateTeacher()">Create</button>
+            </div>
+        </div>
+    </div>
+</div>

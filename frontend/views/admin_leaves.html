@@ -1,0 +1,32 @@
+<div id="admin-leaves-view">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h2>Leave Review</h2>
+            <p class="text-muted">Approve, reject, or override student leave requests.</p>
+        </div>
+    </div>
+
+    <div class="card shadow-sm p-3 mb-4">
+        <div class="row g-3 align-items-end">
+            <div class="col-md-4">
+                <label class="form-label">Search</label>
+                <input id="admin-leave-search" class="form-control" placeholder="Leave ID or reason" />
+            </div>
+            <div class="col-md-3">
+                <label class="form-label">Status</label>
+                <select id="admin-leave-status" class="form-select">
+                    <option value="">All</option>
+                    <option value="Pending">Pending</option>
+                    <option value="Approved">Approved</option>
+                    <option value="Rejected">Rejected</option>
+                    <option value="Cancelled">Cancelled</option>
+                </select>
+            </div>
+            <div class="col-md-2 d-grid">
+                <button class="btn btn-primary" onclick="loadAdminLeaves()">Search</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="admin-leaves-list"></div>
+</div>

@@ -1,0 +1,52 @@
+<div id="admin-dashboard-view">
+    <div class="welcome-row">
+        <h1>Hello, <span id="admin-welcome-name">Admin</span>. 👋</h1>
+        <p class="welcome-sub">Monitor users, attendance, and approvals from one place.</p>
+    </div>
+
+    <div class="info-grid">
+        <div class="ic-card info-card">
+            <div class="ic-label">Total Students</div>
+            <div class="ic-value" id="admin-total-students">—</div>
+        </div>
+        <div class="info-card">
+            <div class="ic-label">Total Teachers</div>
+            <div class="ic-value" id="admin-total-teachers">—</div>
+        </div>
+        <div class="info-card">
+            <div class="ic-label">Total Departments</div>
+            <div class="ic-value" id="admin-total-departments">—</div>
+        </div>
+        <div class="info-card">
+            <div class="ic-label">Pending Leave Requests</div>
+            <div class="ic-value" id="admin-pending-leaves">—</div>
+        </div>
+        <div class="info-card">
+            <div class="ic-label">Active Attendance Sessions</div>
+            <div class="ic-value" id="admin-active-sessions">—</div>
+        </div>
+    </div>
+
+    <h2 class="section-title">Quick Actions</h2>
+    <div class="quick-grid" id="admin-quick-actions-body">
+        <div class="quick-card" onclick="loadView('admin_users')">
+            <div class="quick-icon qi-navy">👥</div>
+            <h4>Manage Users</h4>
+            <p>Browse students and teachers.</p>
+        </div>
+    </div>
+
+    <div class="widget-grid">
+        <div class="widget">
+            <div class="widget-header">
+                <h3 class="widget-title">📋 Recent Activity</h3>
+            </div>
+            <div id="admin-activity-body">
+                <div class="empty-state">
+                    <div class="empty-icon">📋</div>
+                    <div class="empty-msg">Loading activity...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

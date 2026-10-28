@@ -1,0 +1,88 @@
+<div id="teacher-dashboard-view">
+    <div class="welcome-row">
+        <h1>Hello, <span id="teacher-welcome-name">Teacher</span>. 👋</h1>
+        <p class="welcome-sub">Here's your teaching overview for today.</p>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <div class="ic-label">Employee ID</div>
+            <div class="ic-value" id="teacher-employee-id">—</div>
+        </div>
+        <div class="info-card">
+            <div class="ic-label">Department</div>
+            <div class="ic-value" id="teacher-dept">—</div>
+        </div>
+        <div class="info-card">
+            <div class="ic-label">Subjects</div>
+            <div class="ic-value" id="teacher-subjects">—</div>
+        </div>
+        <div class="info-card">
+            <div class="ic-label">Today's Classes</div>
+            <div class="ic-value" id="teacher-today-classes">—</div>
+        </div>
+    </div>
+
+    <h2 class="section-title">Quick Statistics</h2>
+    <div class="quick-grid">
+        <div class="quick-card" onclick="loadView('teacher_attendance')">
+            <div class="quick-icon qi-green">📅</div>
+            <h4>Attendance Sessions</h4>
+            <p id="teacher-stat-sessions">Checking sessions…</p>
+        </div>
+        <div class="quick-card" onclick="loadView('notifications')">
+            <div class="quick-icon qi-amber">🔔</div>
+            <h4>Notifications</h4>
+            <p id="teacher-stat-notifications">Checking updates…</p>
+        </div>
+        <div class="quick-card" onclick="loadView('profile')">
+            <div class="quick-icon qi-navy">👤</div>
+            <h4>Profile Summary</h4>
+            <p id="teacher-profile-summary">Review your profile details</p>
+        </div>
+        <div class="quick-card" onclick="loadView('teacher_attendance')">
+            <div class="quick-icon qi-accent">✏️</div>
+            <h4>Start Attendance</h4>
+            <p>Open the attendance workspace for today.</p>
+        </div>
+    </div>
+
+    <div class="widget-grid">
+        <div class="widget">
+            <div class="widget-header">
+                <h3 class="widget-title">📚 Today's Classes</h3>
+            </div>
+            <div id="teacher-classes-body">
+                <div class="empty-state">
+                    <div class="empty-icon">📚</div>
+                    <div class="empty-msg">Loading classes…</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="widget">
+            <div class="widget-header">
+                <h3 class="widget-title">🧾 Recent Attendance Sessions</h3>
+            </div>
+            <div id="teacher-sessions-body">
+                <div class="empty-state">
+                    <div class="empty-icon">🧾</div>
+                    <div class="empty-msg">Loading sessions…</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="widget">
+            <div class="widget-header">
+                <h3 class="widget-title">🔔 Notifications</h3>
+                <span class="widget-action" onclick="loadView('notifications')">View All →</span>
+            </div>
+            <div id="teacher-notifications-body">
+                <div class="empty-state">
+                    <div class="empty-icon">🔔</div>
+                    <div class="empty-msg">Loading notifications…</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
